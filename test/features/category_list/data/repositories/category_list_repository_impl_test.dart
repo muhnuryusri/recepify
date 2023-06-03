@@ -3,7 +3,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:recepify/core/error/exceptions.dart';
 import 'package:recepify/core/error/failures.dart';
-import 'package:recepify/core/platform/network_info.dart';
+import 'package:recepify/core/network/network_info.dart';
 import 'package:recepify/features/category_list/data/datasources/category_list_local_data_source.dart';
 import 'package:recepify/features/category_list/data/datasources/category_list_remote_data_source.dart';
 import 'package:recepify/features/category_list/data/models/category_list_model.dart';

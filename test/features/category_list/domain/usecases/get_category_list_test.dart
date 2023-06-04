@@ -6,9 +6,8 @@ import 'package:recepify/features/category_list/domain/repositories/category_lis
 import 'package:flutter_test/flutter_test.dart';
 import 'package:recepify/features/category_list/domain/usecases/get_category_list.dart';
 
-class MockCategoryListRepository extends Mock implements CategoryListRepository {
-  
-}
+class MockCategoryListRepository extends Mock
+    implements CategoryListRepository {}
 
 void main() {
   late GetCategoryList usecase;
@@ -19,14 +18,11 @@ void main() {
     usecase = GetCategoryList(mockCategoryListRepository);
   });
 
-  final tCategoryList =
-      CategoryList(
-        categoryList: [
-          CategoryData(category: 'Beef'),
-          CategoryData(category: 'Chicken'),
-          CategoryData(category: 'Breakfast'),
-        ]
-      );
+  final tCategoryList = CategoryList(categoryList: [
+    CategoryData(category: 'Beef'),
+    CategoryData(category: 'Chicken'),
+    CategoryData(category: 'Breakfast'),
+  ]);
 
   test(
     'should get category list from repository',
@@ -36,7 +32,8 @@ void main() {
           .thenAnswer((_) async => Right(tCategoryList));
 
       // Act
-      final result = await usecase(NoParams()); // assuming execute is the function to execute the use case
+      final result = await usecase(
+          NoParams()); // assuming execute is the function to execute the use case
 
       // Assert
       expect(result, Right(tCategoryList));

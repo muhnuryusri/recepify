@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:recepify/features/category_list/domain/entities/category_list.dart';
 import 'package:recepify/features/category_list/presentation/bloc/category_list_bloc.dart';
 
 import '../../../../injection_container.dart';
-import '../../../category_list/presentation/widgets/category_list_widget.dart';
 import 'home_layout.dart';
 
 class HomePage extends StatelessWidget {
